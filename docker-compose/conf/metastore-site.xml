@@ -79,7 +79,7 @@
 
     <property>
         <name>hive.txn.manager.log.dir</name>
-        <value>/opt/apache-hive-metastore-3.0.0-bin/conf</value>
+        <value>/etc/trino</value>
     </property>
 
 </configuration>

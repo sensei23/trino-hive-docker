@@ -38,4 +38,36 @@
         <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
     </property>
 
+    
+    <!-- Enable ACID support -->
+    <property>
+    <name>hive.support.concurrency</name>
+    <value>true</value>
+    </property>
+    <property>
+    <name>hive.enforce.bucketing</name>
+    <value>true</value>
+    </property>
+    <property>
+    <name>hive.exec.dynamic.partition.mode</name>
+    <value>nostrict</value>
+    </property>
+    <property>
+    <name>hive.txn.manager</name>
+    <value>org.apache.hadoop.hive.ql.lockmgr.DbTxnManager</value>
+    </property>
+    <property>
+    <name>hive.compactor.initiator.on</name>
+    <value>true</value>
+    </property>
+    <property>
+    <name>hive.compactor.worker.threads</name>
+    <value>1</value>
+    </property>
+
+    <property>
+        <name>hive.txn.manager.log.dir</name>
+        <value>/etc/trino</value>
+    </property>
+
 </configuration>

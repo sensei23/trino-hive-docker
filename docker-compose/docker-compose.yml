@@ -7,6 +7,7 @@ services:
       - '8080:8080'
     volumes:
       - ./etc:/etc/trino
+      - ./conf:/etc/trino/conf
     networks:
       - trino-network
 
@@ -25,7 +26,7 @@ services:
       - trino-network
 
   hive-metastore:
-    image: 'my-hive-metastore:latest'
+    image: 'my-hive-metastore-2:latest'
     hostname: hive-metastore
     ports:
       - '9083:9083' # Metastore Thrift
